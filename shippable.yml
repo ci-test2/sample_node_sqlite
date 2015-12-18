@@ -10,6 +10,11 @@ env:
   - XUNIT_FILE=shippable/testresults/result.xml
   - FOO=foo BAR=bar
   - FOO=bar BAR=foo
+  
+services:
+  - sqlite
+  
+build_image: drydock/u14nodpls:tip
 
 # Create directories for test and coverage reports
 before_script:
@@ -32,4 +37,4 @@ notifications:
     
 archive: true
 
-cache: true
+#cache: true
